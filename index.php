@@ -22,20 +22,22 @@
     <main class="mx-auto max-w-screen-lg space-y-6">
         <div class="my-4">
             <form class="w-full flex space-x-2">
-                <input type="text" placeholder="O que você procura?" name="pesquisar"  class=" border-stone-800 border-2 rounded-md bg-stone-800 text-sm focus:outline-none px-2 py-1">               
+                <input type="text" placeholder="O que você procura?" name="pesquisar"  
+                class=" border-stone-800 border-2 rounded-md bg-stone-800 text-sm focus:outline-none px-2 py-1">               
                 <button type="submit">🔍</button>
             </form>
         </div>
         <div>
-            <section class="space-y-4">
+            <!-- Lista de livros -->
+            <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 flex gap-4">
 
-            <div class="bg-stone-800 w-1/3 p-2 border-stone-800 border-2 rounded">
+            <div class="bg-stone-800  p-2 border-stone-800 border-2 rounded">
                 <!-- Livros -->
                 <div class="flex">
 
                     <div class="w-1/3">imagem</div>
                     <div>
-                        <div class="font-semibold">titulo</div>
+                        <a href="/livro.php" class="font-semibold hover:underline">titulo</a>
                         <div class="font-italic text-xs">autor</div>
                         <div class="text-xs italic">✔️✔️✔️✔️✔️3 Avaliacoes</div>
                     </div>
@@ -43,8 +45,34 @@
                     </div>
                     <div class="text-sm">descrição</div>
                 </div>
-                
+            <div class="bg-stone-800 p-2 border-stone-800 border-2 rounded">
+                <!-- Livros -->
+                <div class="flex">
 
+                    <div class="w-1/3">imagem</div>
+                    <div>
+                        <a href="/livro.php" class="font-semibold hover:underline">titulo</a>
+                        <div class="font-italic text-xs">autor</div>
+                        <div class="text-xs italic">✔️✔️✔️✔️✔️3 Avaliacoes</div>
+                    </div>
+
+                    </div>
+                    <div class="text-sm">descrição</div>
+                </div>
+            <div class="bg-stone-800 p-2 border-stone-800 border-2 rounded">
+                <!-- Livros -->
+                <div class="flex">
+
+                    <div class="w-1/3">imagem</div>
+                    <div>
+                        <a href="/livro.php" class="font-semibold hover:underline">titulo</a>
+                        <div class="font-italic text-xs">autor</div>
+                        <div class="text-xs italic">✔️✔️✔️✔️✔️3 Avaliacoes</div>
+                    </div>
+
+                    </div>
+                    <div class="text-sm">descrição</div>
+                </div>
             </section>
         </div>
     </main>
