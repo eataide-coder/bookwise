@@ -1,16 +1,3 @@
-<?php
-
-require_once "dados.php";
-$id = $_REQUEST["id"];
-
-$filtrado = array_filter($liuvos, function ($livro) use ($id) {
-    return $livro["id"] == $id;
-});
-
-$livro = array_pop($filtrado);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,9 +20,24 @@ $livro = array_pop($filtrado);
         </nav>
     </header>
     <main class="mx-auto max-w-screen-lg space-y-6">
-    
-      <div class="bg-stone-800 p-2 border-stone-800 border-2 rounded">                 
+        <div class="my-4">
+            <form class="w-full flex space-x-2">
+                <input type="text" placeholder="O que você procura?" name="pesquisar"  
+                class=" border-stone-800 border-2 rounded-md bg-stone-800 text-sm focus:outline-none px-2 py-1">               
+                <button type="submit">🔍</button>
+            </form>
+        </div>
+        <div>
+            <!-- Lista de livros -->
+            <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 flex gap-4">
+
+            <?php foreach($liuvos as $livro): ?>
+
+            <div class="bg-stone-800 p-2 border-stone-800 border-2 rounded">
+                <!-- Livros -->
+                 
                 <div class="flex">
+
                     <div class="w-1/3">imagems</div>
                     <div class="space-y-1">
                         <a href="/livro.php?id=<?=$livro["id"] ?>" class="font-semibold hover:underline"><?= $livro["titulo"] ?></a>
@@ -46,6 +48,10 @@ $livro = array_pop($filtrado);
                     </div>
                     <div class="text-sm mt-2"><?=$livro["descricao"] ?></div>
                 </div>
+                <?php endforeach; ?>
+
+            </section>
+        </div>
     </main>
     
 </body>
