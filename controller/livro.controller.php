@@ -1,6 +1,6 @@
 <?php
 
-require_once "dados.php";
+require "dados.php";
 
 $id = $_REQUEST["id"];
 
