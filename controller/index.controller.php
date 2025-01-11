@@ -1,5 +1,5 @@
-<?php
+<?php 
 
-require "dados.php";
+$livros = (new Db())->livros();
 
 view("index", compact("livros"));
