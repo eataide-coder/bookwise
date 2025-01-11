@@ -9,7 +9,7 @@
 </head>
 
 <body class="bg-gray-900">
-    <section class="w-full h-screen border flex flex-col justify-center items-center">
+    <section class="w-full h-screen flex flex-col justify-center items-center">
         <h1 class="text-3xl font-italic text-white">
             404 - Página não encontrada
         </h1>

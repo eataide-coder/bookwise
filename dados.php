@@ -1,5 +1,5 @@
 <?php
-$liuvos = [
+$livros = [
     [
         "id" => 1,
         "titulo" => "O Senhor dos Anéis - A Sociedade do Anel",

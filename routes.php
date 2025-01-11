@@ -1,24 +1,18 @@
 <?php
 
-function carregarController()
-{
+    $controller = parse_url($_SERVER["REQUEST_URI"])["path"];
 
-    $controller = "index";
+    $controller = str_replace("/", "", $controller);
 
-    if (isset($_SERVER["PATH_INFO"])) {
-        $controller = str_replace("/", "", $_SERVER["PATH_INFO"]);
-    };
+    if (!$controller) {
 
-    if (!file_exists("controller/{$controller}.controller.php")) {
+        $controller = "index";
+    }
 
-        http_response_code(404);
+    if (! file_exists("controller/{$controller}.controller.php")) {
 
-        require "views/error.view.php";
-
-        exit;
+        abort(404);
     }
 
     require "controller/{$controller}.controller.php";
-}
 
-carregarController();
